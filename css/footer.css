@@ -1,0 +1,99 @@
+footer {
+    background-color: #181818;
+    background-image: url(../assets/images/shape_dot.png);
+    padding-top: 100px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-wrapper {
+    width: 150px;
+}
+
+.logo-wrapper img {
+    width: 100%;
+}
+
+.divider {
+    width: calc((100% - 200px)/2);
+    height: 1px;
+    background: var(--body);
+}
+
+/* footer-columns */
+
+.footer-columns {
+    padding: 100px 0;
+}
+
+.footer-column {
+    text-align: center;
+}
+
+.footer-column h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.footer-socials {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.footer-socials li {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--background-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribe {
+    margin-top: 20px;
+    border: 1px solid #262626;
+    padding: 3px 1px 3px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscribe-input {
+    background: transparent;
+    color: white;
+    border: none;
+    flex-grow: 1;
+}
+
+.subscribe-input:focus {
+    outline: none;
+}
+
+/* footer-copyright */
+.footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background: var(--color-secondary);
+    color: white;
+    font-size: 1.4rem;
+}
+
+.footer-copyright span {
+    color: var(--color-primary);
+}
+
+.visa-img-wrapper {
+    width: 300px;
+}

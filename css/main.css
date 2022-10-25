@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
+
+/* variable + fonts */
+/* fonts */
+@font-face {
+    font-family: 'gilroy';
+    font-weight: normal;
+    src: url(../assets/fonts/Gilroy-Light.otf);
+}
+
+@font-face {
+    font-family: 'gilroy';
+    font-weight: bold;
+    src: url(../assets/fonts/Gilroy-ExtraBold.otf);
+}
+
+@font-face {
+    font-family: 'norican';
+    font-weight: normal;
+    src: url(../assets/fonts/norican.regular.otf);
+}
+
+/* variables */
+:root {
+    --font-primary: gilroy, helveticaneue-light, helvetica neue light, helvetica neue, Helvetica, Arial, lucida grande, sans-serif;
+    --font-deco: 'Norican', cursive;
+    /* background color */
+    --color-primary: #ffc222;
+    --primary-hover: #eeac00;
+    --color-secondary: #00a149;
+    --secondary-hover: #007c38;
+    --background-main: #fff;
+    /* text color */
+    --body: #808080;
+    --light: #999999;
+    --dark: #282828;
+    --header: #1E1D23;
+    /* border color */
+    --border: #e5e5e5;
+}
+
+/* end variable + fonts */
+
+
+
+/*  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 0.625rem;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--font-primary);
+    color: var(--body);
+    background: var(--background-main);
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--header);
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--header);
+}

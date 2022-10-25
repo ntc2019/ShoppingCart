@@ -1,0 +1,696 @@
+.orange {
+    color: var(--color-primary);
+}
+
+/*START banner */
+.banner {
+    position: relative;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* banner background */
+.banner .bg {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.overlay-bg {
+    background-image: radial-gradient(at center center, #3d3d3d 0%,
+            #000000 100%);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.banner .bg .mushroom-veg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-35%);
+}
+
+.banner .bg .tomatoes {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    filter: drop-shadow(-15px 15px 10px black);
+}
+
+.banner .bg .veg-two {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-20%);
+    filter: drop-shadow(-15px 15px 10px rgba(0, 0, 0, 0.6));
+}
+
+.banner .bg .mushroom {
+    position: absolute;
+    top: 80%;
+    right: 5%;
+    transform: rotate(20deg);
+}
+
+.banner .bg .veg-three {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    transform: translateX(40%);
+}
+
+.overlay-bg img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.overlay-img {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    top: 50%;
+    transform: translateY(-70%);
+    left: 25%;
+    opacity: 0.6;
+}
+
+/* end background */
+.banner-wrapper {
+    align-items: center;
+    height: 100%;
+}
+
+/* banner content */
+.banner h1 {
+    color: white;
+    font-size: 7.6rem;
+    font-weight: bold;
+}
+
+.banner h2 {
+    color: var(--color-secondary);
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.banner p {
+    color: white;
+    font-size: 1.8rem;
+}
+
+
+.banner-ctas {
+    display: flex;
+    margin-top: 30px;
+}
+
+.banner a {
+    height: 50px;
+    padding: 0px 40px;
+}
+
+.banner-ctas .price {
+    color: var(--color-secondary);
+    font-size: 4rem;
+    font-weight: bold;
+    position: relative;
+    padding-right: 15px;
+    margin-left: 30px;
+}
+
+.banner-ctas .full-price {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    color: var(--body);
+    font-size: 1.6rem;
+}
+
+/* banner imgs */
+.banner-imgs {
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+.banner-imgs .salt-img {
+    position: absolute;
+    z-index: -1;
+    top: 25%;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.5);
+}
+
+/* END banner */
+
+
+
+
+
+/* START Menus */
+.menus {
+    position: relative;
+    padding: 50px;
+}
+
+.btn-menus {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.btn-menus a {
+    height: 50px;
+    padding: 0px 40px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.menus-items {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.menus-items span {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    font-size: 1.3rem;
+    transition: color 200ms;
+}
+
+.menus-items li {
+    transition: transform 200ms;
+}
+
+.menus-items li:hover span {
+    color: var(--color-primary);
+}
+
+.menus-items li:hover {
+    transform: scale(1.1);
+
+}
+
+.menus-items li:hover img {
+    filter: drop-shadow(0px 5px 1px #00000060) drop-shadow(0px 0px 30px #ffc222) drop-shadow(0px 0px 20px #ffc222);
+}
+
+/* END Menus */
+
+
+
+/* START Offers One */
+
+.offers-one {
+    background: #f7f2e2;
+    padding: 80px 0px;
+}
+
+.offers-one-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.offers-one-wrapper li {
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.offers-one-wrapper .white {
+    background: white;
+}
+
+.offers-one-wrapper h2 {
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+
+.offers-one-wrapper .white h2 {
+    color: black;
+}
+
+
+.offers-one-wrapper .white {
+    font-size: 1.3rem;
+    color: black;
+}
+
+
+.offers-one-wrapper .img-wrapper {
+    aspect-ratio: 1;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: 180px;
+}
+
+.offers-one-wrapper .overlay {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+
+/* any-day */
+.offers-one-wrapper .price,
+.offers-one-wrapper .find-poco-contact {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.offers-one-wrapper .any-day .price {
+    color: var(--color-secondary);
+}
+
+.offers-one-wrapper .any-day .overlay {
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    transform: translateX(10%);
+}
+
+/* find-poco */
+.offers-one-wrapper .find-poco .find-poco-contact {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.offers-one-wrapper .overlay.moon {
+    transform: translateX(10%);
+}
+
+/* flavors */
+.offers-one-wrapper .flavors {
+    background-image: url(../assets/images/h1_banner2.jpg);
+}
+
+.offers-one-wrapper .flavors {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.offers-one-wrapper .flavors .price {
+    color: var(--color-primary);
+}
+
+/* END Offers One */
+
+
+
+/* Start Comment */
+
+.clients {
+    height: 500px;
+    background: #f7f2e2;
+}
+
+.comment-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.comment-wrapper .comment-title {
+    padding-top: 80px;
+    text-align: center;
+}
+
+.comment-lists {
+    width: 100%;
+}
+
+.comment-lists-wrapper {
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-lists-wrapper .conment-card {
+    width: calc(100%/3 - 20px);
+    height: 255px;
+    border-radius: 4px;
+    background-color: white;
+    padding: 40px;
+}
+
+.conment-card .conment-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.conment-card .conment-info {
+    display: flex;
+    height: 90px;
+}
+
+.conment-info .avatar {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.conment-info .info .name {
+    color: var(--header);
+    font-family: 'gilroy';
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.conment-info .info .job {
+    color: var(--light);
+    font-family: 'gilroy';
+    font-size: 14px;
+}
+
+.conment-info .avatar img {
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.conment-header .rate {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.conment-header .rate .fa-star {
+    color: #ffc900;
+    width: calc(100%/5 - 5px);
+}
+
+.slick-dots {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+}
+
+.slick-dots li {
+
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    background-color: var(--color-primary);
+    width: 14px;
+    border: 0;
+    opacity: .4;
+    display: block;
+    height: 6px;
+    width: 8px;
+    border-radius: 3px;
+    outline: none;
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li.active button {
+    background-color: var(--color-primary);
+    width: 16px;
+    opacity: 1;
+
+}
+
+
+/* End Comment */
+
+
+
+
+/* Start Offers-two */
+.offers-two {
+    height: 500px;
+    background: var(--color-secondary);
+}
+
+.offers-two-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.offers-two-banner {
+    width: calc(100%/3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.offers-two-banner.one {
+    background-color: #00a850;
+    z-index: 1000;
+}
+
+.offers-two-banner.two {
+    background-color: #db731e;
+    z-index: 2000;
+}
+
+.offers-two-banner.three {
+    background-color: #ffc900;
+    z-index: 3000;
+}
+
+.offers-two-banner .offers-content {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    z-index: 1000;
+}
+
+.offers-two-banner .offers-widget {
+    font-family: 'norican';
+    font-size: 42px;
+    color: white;
+}
+
+.offers-two-banner .offers-heading {
+    color: var(--color-primary);
+    font-size: 90px;
+    text-transform: capitalize;
+    line-height: 90px;
+    letter-spacing: -2.5px;
+    text-shadow: 2px 0 6px #00a850;
+    margin-bottom: 20px;
+}
+
+.offers-two-banner .offers-name {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.offers-two-banner .offers-price {
+    color: var(--color-primary);
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.offers-two-banner .btn-primary {
+    background-color: white;
+    color: black;
+}
+
+.offers-two-banner .offers-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.offers-two-banner .offers-image .offers-image-main {
+    position: absolute;
+    top: 10%;
+    right: -50%;
+
+}
+
+
+.offers-two-banner.three .offers-price {
+    color: black;
+}
+
+/* End Offers-two */
+
+
+
+
+
+/* Start Lastest News */
+.news {
+    height: auto;
+}
+
+.news-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+.news-title-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.news-title-wrapper a {
+    margin-right: 10px;
+    color: var(--header);
+}
+
+.news-title-wrapper i {
+    border-radius: 8px;
+    font-size: 24px;
+    color: var(--color-secondary);
+}
+
+.news-content-wrapper {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.news-content-list {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.news-content-list .news-content-card {
+    border: 0.2px solid var(--border);
+    width: calc(100%/3 - 20px);
+    border-radius: 12px;
+}
+
+.news-content-list .news-image {
+    width: 100%;
+    height: auto;
+}
+
+.news-content-list .news-image img {
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.news-content-list .news-content {
+    margin: 30px;
+}
+
+.news-content-list .news-content .entry-meta {
+    display: flex;
+    font-size: 13px;
+}
+
+.news-content-list .news-content .entry-meta a {
+    color: var(--light);
+    margin-bottom: 10px;
+}
+
+.news-content-list .news-content h3 a {
+    color: var(--header);
+}
+
+.news-content-list .news-content p {
+    color: var(--light);
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+/* End Lastest News */
+
+
+
+
+
+
+
+
+
+/* placeholder */
+
+
+
+.products {
+    height: 900px;
+}
+
+.ad {
+    height: 400px;
+    position: relative;
+}
+
+.ad .overlay-bg {
+    height: 100%;
+}
+
+.ad .overlay-bg img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.ad .overlay-pizza {
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    width: 800px;
+}
+
+.ad img {
+    height: 100%;
+}
+
+.top-recipes {
+    height: 700px;
+}
