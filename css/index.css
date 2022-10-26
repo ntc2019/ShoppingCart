@@ -811,6 +811,194 @@
 
 
 
+/* Start Top-recipes*/
+
+.recipes-wrapper {
+    margin-top: 80px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipes-left {
+    width: 68%;
+    height: 100%;
+}
+
+.recipes-left-title {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.recipes-product {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 20px 30px;
+}
+
+.recipes-product .product-card {
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 10px;
+    background: white;
+    width: 100%;
+    height: auto;
+}
+
+.recipes-product .product-card .bg {
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #f7f2e2;
+}
+
+
+
+.recipes-product .product-card .card-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.recipes-product .card-wrapper .card-img {
+    width: 30%;
+}
+
+.recipes-product .card-wrapper .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+    width: 70%;
+    position: relative;
+}
+
+.recipes-product .card-wrapper .card-body h3 {
+    font-size: 16px;
+}
+
+.recipes-product .card-wrapper .card-body h3:hover {
+    color: var(--color-primary);
+}
+
+.recipes-product .card-wrapper .card-body a {
+    color: var(--light);
+    font-size: 13px;
+}
+
+.recipes-product .card-wrapper .card-body a:hover {
+    color: var(--color-primary);
+}
+
+.recipes-product .card-wrapper .card-body .price.discounted {
+    text-decoration-line: line-through;
+    margin-right: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--light);
+}
+
+.recipes-product .card-wrapper .card-body .price {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.recipes-product .card-shopping-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    border-radius: 15px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+
+.recipes-product .card-shopping-cart i {
+    color: var(--dark);
+    transition: 0.2s;
+}
+
+.recipes-product .card-shopping-cart:hover i {
+    color: white;
+}
+
+.recipes-right {
+    width: 30%;
+    position: relative;
+    background-color: var(--color-primary);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.recipes-right-banner {
+    width: auto;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.recipes-right .image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.recipes-right-banner .title {
+    font-family: 'norican';
+    color: white;
+    font-size: 42px;
+}
+
+.recipes-right-banner .name {
+    font-size: 70px;
+    font-weight: 700;
+    color: var(--red);
+}
+
+.recipes-right-banner .call {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.recipes-right-banner .phone {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--red);
+}
+
+.recipes-right .image img {
+    scale: 1.2;
+    object-fit: fill;
+    height: 100%;
+}
+
+
+
+/* End Top-recipes*/
+
+
+
+
 
 /* Start Offers-two */
 .offers-two {
