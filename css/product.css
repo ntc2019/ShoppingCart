@@ -1,0 +1,17 @@
+/* placeholder */
+main nav {
+    height: 70px;
+    background-image: url(../assets/images/breadcrumb1.jpg);
+}
+
+.product-main-body {
+    height: 800px;
+}
+
+.description {
+    height: 600px;
+}
+
+.related-products {
+    height: 400px;
+}
