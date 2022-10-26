@@ -500,6 +500,153 @@
 
 /* END products */
 
+
+
+/* START Ads */
+
+.ad {
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.ad .overlay-bg {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.ad .overlay-bg img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.ad .overlay-pizza {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    display: flex;
+    align-items: flex-end;
+    transform: translateY(15%);
+}
+
+.ad .discount-img {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 226px;
+    height: 216px;
+}
+
+.ad .discount-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+}
+
+.ad .discount-img .discount-body {
+    position: absolute;
+    top: 12%;
+    left: 18%;
+    text-align: center;
+}
+
+.ad .discount-img .discount-body .get-up {
+    font-family: var(--font-deco);
+    color: black;
+    font-weight: bold;
+    padding-right: 8px;
+}
+
+.ad .discount-img .discount-body .percent {
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    color: var(--color-primary);
+
+}
+
+.ad .discount-img .discount-body .off {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1;
+    color: black;
+    padding-right: 8px;
+}
+
+/* ads body */
+
+.ad .ad-body {
+    width: 40%;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 50px;
+}
+
+.ad .ad-body .hot {
+    font-family: var(--font-deco);
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    filter: drop-shadow(4px 1px 3px rgba(0, 0, 0, 1));
+}
+
+.ad .ad-body .pizza {
+    position: relative;
+    color: #ffcd02;
+    font-size: 15rem;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 10px;
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
+    margin-bottom: 70px;
+}
+
+.ad .ad-body a {
+    background-color: white;
+    font-size: 1.5rem;
+    padding: 18px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: all 200ms;
+}
+
+.ad .ad-body a:hover {
+    background-color: var(--color-primary);
+}
+
+.ad .ad-body .pizza .lightning-icon {
+    position: absolute;
+    top: 0;
+    height: fit-content;
+}
+
+.ad .ad-body .pizza .lightning-icon.one {
+    width: 50px;
+    right: 50%;
+    transform: translateY(-85%);
+}
+
+.ad .ad-body .pizza .lightning-icon.two {
+    width: 90px;
+    right: 36%;
+    transform: translateY(-75%);
+}
+
+/* END Ads */
 /* Start Comment */
 
 .clients {
@@ -871,33 +1018,7 @@
 
 
 
-.ad {
-    height: 400px;
-    position: relative;
-}
 
-.ad .overlay-bg {
-    height: 100%;
-}
-
-.ad .overlay-bg img {
-    height: 100%;
-    width: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-.ad .overlay-pizza {
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 200px;
-    width: 800px;
-}
-
-.ad img {
-    height: 100%;
-}
 
 .top-recipes {
     height: 700px;
