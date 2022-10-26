@@ -729,6 +729,15 @@
     margin-bottom: 20px;
 }
 
+.offers-two-banner .offers-heading.red {
+    color: var(--red);
+    font-size: 90px;
+    text-transform: capitalize;
+    line-height: 90px;
+    letter-spacing: -2.5px;
+    text-shadow: 2px 0 6px #ffc900;
+}
+
 .offers-two-banner .offers-name {
     color: white;
     font-size: 18px;
@@ -744,7 +753,16 @@
 
 .offers-two-banner .btn-primary {
     background-color: white;
+    padding: 1.5em 3em;
     color: black;
+    transition: 0.3s;
+}
+
+.offers-two-banner .btn-primary:hover {
+    background-color: var(--dark);
+    padding: 1.5em 3em;
+    color: white;
+
 }
 
 .offers-two-banner .offers-image {
@@ -756,12 +774,48 @@
 }
 
 .offers-two-banner .offers-image .offers-image-main {
+    width: 100%;
+    height: 95%;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 10%;
-    right: -50%;
+    z-index: 10;
+    right: 0;
+    transform: translateX(40%);
+}
+
+.offers-two-banner .offers-image .offers-image-main img {
+    max-width: 100%;
+    object-fit: fill;
+}
+
+.offers-two-banner .offers-image .offers-image-hover {
+    width: 100%;
+    height: 95%;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    transform: translateX(20%);
 
 }
 
+.offers-two-banner .offers-image .offers-image-hover img {
+    max-width: 100%;
+    object-fit: fill;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.offers-two-banner:hover .offers-image .offers-image-hover img {
+    transform: scale(0.8);
+
+}
 
 .offers-two-banner.three .offers-price {
     color: black;
@@ -789,7 +843,6 @@
 
 .news-title-wrapper {
     display: flex;
-    align-items: center;
 }
 
 .news-title-wrapper a {
@@ -797,10 +850,25 @@
     color: var(--header);
 }
 
-.news-title-wrapper i {
+.news-title-wrapper a:hover {
+    color: var(--color-primary);
+}
+
+.news-title-wrapper .button {
+    width: 24px;
+    height: 24px;
     border-radius: 8px;
-    font-size: 24px;
-    color: var(--color-secondary);
+    font-size: 12px;
+    color: white;
+    background-color: var(--color-secondary);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-title-wrapper .button:hover {
+    color: white;
 }
 
 .news-content-wrapper {
@@ -824,11 +892,15 @@
 .news-content-list .news-image {
     width: 100%;
     height: auto;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
 .news-content-list .news-image img {
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
+    transition: all .2s ease-in-out;
+    object-fit: fill;
+
+
 }
 
 .news-content-list .news-content {
@@ -837,16 +909,31 @@
 
 .news-content-list .news-content .entry-meta {
     display: flex;
-    font-size: 13px;
 }
 
-.news-content-list .news-content .entry-meta a {
+.news-content-list .entry-meta a {
+    font-size: 13px;
     color: var(--light);
     margin-bottom: 10px;
 }
 
+.news-content-list .entry-meta span {
+    font-size: 13px;
+    color: var(--light);
+    margin-bottom: 10px;
+}
+
+.entry-meta a:hover {
+    font-size: 13px;
+    color: var(--color-primary);
+}
+
 .news-content-list .news-content h3 a {
     color: var(--header);
+}
+
+.news-content-list .news-content h3 a:hover {
+    color: var(--color-primary);
 }
 
 .news-content-list .news-content p {
@@ -855,6 +942,18 @@
     padding-bottom: 20px;
 }
 
+.news-content .btn-primary {
+    padding: 1.4em 2.5em;
+}
+
+.news-content .btn-primary:hover {
+    color: white;
+    background-color: var(--primary-hover);
+}
+
+.news-content-list .news-content-card:hover .news-image img {
+    transform: scale(1.2);
+}
 
 /* End Lastest News */
 
