@@ -34,38 +34,33 @@
 .banner .bg .mushroom-veg {
     position: absolute;
     top: 0;
-    left: 0;
-    transform: translateX(-35%);
+    left: -8%;
 }
 
 .banner .bg .tomatoes {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -25%);
+    top: -10%;
+    left: 30%;
     filter: drop-shadow(-15px 15px 10px black);
 }
 
 .banner .bg .veg-two {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-20%);
+    top: 55%;
+    left: 48%;
     filter: drop-shadow(-15px 15px 10px rgba(0, 0, 0, 0.6));
 }
 
 .banner .bg .mushroom {
     position: absolute;
     top: 80%;
-    right: 5%;
-    transform: rotate(20deg);
+    right: 10%;
 }
 
 .banner .bg .veg-three {
     position: absolute;
     top: 10%;
-    right: 0;
-    transform: translateX(40%);
+    right: -10%;
 }
 
 .overlay-bg img {
@@ -218,7 +213,7 @@
 }
 
 .menus-items li:hover img {
-    filter: drop-shadow(0px 5px 1px #00000060) drop-shadow(0px 0px 30px #ffc222) drop-shadow(0px 0px 20px #ffc222);
+    filter: drop-shadow(0px 5px 1px #00000060) drop-shadow(0px 0px 30px #ffed86c7) drop-shadow(0px 0px 10px #ffb62f);
 }
 
 /* END Menus */
@@ -298,7 +293,6 @@
     height: 100%;
     border-radius: 50%;
     background-color: var(--color-primary);
-    transform: translateX(10%);
 }
 
 /* find-poco */
@@ -307,8 +301,10 @@
     font-size: 1.5rem;
 }
 
-.offers-one-wrapper .overlay.moon {
-    transform: translateX(10%);
+.offers-one-wrapper .overlay {
+    position: absolute;
+    top: 0;
+    left: 10%;
 }
 
 /* flavors */
@@ -323,6 +319,15 @@
 
 .offers-one-wrapper .flavors .price {
     color: var(--color-primary);
+}
+
+/* hover anim */
+.offers-one-wrapper .img-wrapper .overlay {
+    transition: 300ms;
+}
+
+.offers-one-wrapper .img-wrapper:hover .overlay {
+    transform: scale(1.2);
 }
 
 /* END Offers One */
