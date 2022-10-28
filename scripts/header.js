@@ -10,6 +10,7 @@ window.addEventListener('scroll', () => {
         navBar.style.boxShadow = '0px 2px 20px rgba(0,0,0,0.2)';
     } else {
         navBar.style.padding = '30px';
+        navBar.style.boxShadow = 'none';
     }
 })
 
