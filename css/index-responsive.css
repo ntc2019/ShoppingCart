@@ -13,9 +13,12 @@
     /* END offer one */
     /* START ads */
     .pizza-offer .discount-img {
-        transform: scale(0.7);
         left: 7%;
         top: -5%;
+    }
+
+    .pizza-offer .discount-img .scale-fix {
+        transform: scale(0.7);
     }
 
     .pizza-offer {

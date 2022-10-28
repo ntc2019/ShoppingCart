@@ -8,7 +8,7 @@
     height: 900px;
     display: flex;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* banner background */
@@ -163,11 +163,13 @@
 .menus {
     position: relative;
     padding: 50px;
+
 }
 
 .btn-menus {
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     text-align: center;
     transform: translateY(-50%);
@@ -187,6 +189,7 @@
     grid-template-columns: repeat(8, 1fr);
     justify-items: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .menus-items span {
@@ -201,6 +204,10 @@
 
 .menus-items li {
     transition: transform 200ms;
+}
+
+.menus-items li a {
+    display: block;
 }
 
 .menus-items li:hover span {
@@ -375,7 +382,7 @@
     border: 1px solid var(--border);
     border-radius: 30px;
     padding: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     position: relative;
 }
 
@@ -500,11 +507,34 @@
     width: 40px;
     height: 40px;
     background-color: var(--color-primary);
+    cursor: pointer;
     border-radius: 15px;
+    transition: 200ms;
 }
+
 
 .products .dishes-cards .card-wrapper .card-body .card-shopping-cart i {
     color: black;
+    transition: 200ms;
+}
+
+.products .dishes-cards .card-wrapper .card-body .card-shopping-cart:hover {
+    background-color: #f0af0c;
+}
+
+.products .dishes-cards .card-wrapper .card-body .card-shopping-cart:hover i {
+    color: white;
+}
+
+.products .products-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.products .products-link a {
+    font-size: 1.4rem;
+    padding: 20px 40px;
 }
 
 /* END products */
@@ -558,11 +588,15 @@
     height: 216px;
 }
 
+.pizza-offer .discount-img .scale-fix {
+    width: 100%;
+    height: 100%;
+}
+
 .pizza-offer .discount-img img {
     position: absolute;
     top: 0;
     left: 0;
-
     z-index: -1;
 }
 
@@ -655,7 +689,7 @@
 .pizza-offer .pizza-offer-body .pizza .lightning-icon.two {
     width: 90px;
     right: 2%;
-    transform: translateY(-75%);
+    top: -50%;
 }
 
 /* END Ads */

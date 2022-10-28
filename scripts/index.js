@@ -1,4 +1,7 @@
 // Page open anim
+const pageLoadScrollY = window.scrollY;
+console.log(pageLoadScrollY);
+// Banner section
 let bannerPizzaAnim = anime({
     targets: '.banner-imgs .banner-pizza',
     opacity:{
@@ -115,3 +118,80 @@ let vegTwoAnim = anime({
     duration: 400,
     delay: 400
 })
+
+// Menus section
+let isMenusAnim = true;
+const menusItems = document.querySelector('.menus-items');
+const menuTopOffset = getTopOffset(menusItems);
+const menusOpenAnim = anime({
+    targets:'.menus-items a',
+    opacity: {
+        value: [0,1],
+        easing: 'easeOutSine',
+        delay: anime.stagger(50,{start:(100)}),
+    },
+    translateY:['100%',0],
+    delay:anime.stagger(50),
+    easing:'easeOutSine',
+    duration: 400,
+    autoplay:false,
+})
+
+window.addEventListener('scroll', () => {
+    if(!isMenusAnim) {
+        return;
+    }
+    if(scrollY >= menuTopOffset + pageLoadScrollY){
+        menusOpenAnim.play();
+        isMenusAnim = false;
+    }
+})
+// Pizza Offer section
+let isDiscountSlide = true;
+const discountOffsetTop = getTopOffset(document.querySelector('.pizza-offer'));
+
+
+const discountSlideInAnim = anime({
+    targets:'.discount-img',
+    opacity: {
+        value: [0,1],
+        easing: 'easeOutSine',
+    },
+    translateX:['-70%',0],
+    easing:'easeOutSine',
+    delay:200,
+    duration: 600,
+    autoplay:false,
+})
+
+const lightningIconAnim = anime({
+    targets:'.pizza-offer .pizza-offer-body .pizza .lightning-icon',
+    opacity: {
+        value: [0,1],
+        easing: 'easeOutSine',
+    },
+    rotateY:['-0.5turn',0],
+    easing:'easeOutSine',
+    delay:200,
+    duration: 600,
+    autoplay:false,
+})
+window.addEventListener('scroll', () => {
+    if(!isDiscountSlide) {
+        return;
+    }
+    if(scrollY >= discountOffsetTop + pageLoadScrollY){
+        discountSlideInAnim.play();
+        lightningIconAnim.play();
+        isDiscountSlide = false;
+    }
+})
+
+// get distance from bottom of viewport to top of Element
+function getTopOffset(element){
+    const boundingRect = element.getBoundingClientRect();
+    const distanceFromTop = boundingRect.top;
+    const topOffset = distanceFromTop - window.innerHeight;
+
+    return topOffset;
+}
