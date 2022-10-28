@@ -12,22 +12,22 @@
 
     /* END offer one */
     /* START ads */
-    .ad .discount-img {
+    .pizza-offer .discount-img {
         transform: scale(0.7);
         left: 7%;
         top: -5%;
     }
 
-    .ad {
+    .pizza-offer {
         justify-content: center;
     }
 
-    .ad .ad-body {
+    .pizza-offer .pizza-offer-body {
         width: 80%;
         text-align: center;
     }
 
-    .ad .ad-body .button-wrapper {
+    .pizza-offer .pizza-offer-body .button-wrapper {
         display: flex;
         justify-content: center;
     }
