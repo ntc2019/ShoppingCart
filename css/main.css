@@ -14,11 +14,11 @@
     src: url(../assets/fonts/Gilroy-ExtraBold.otf);
 }
 
-@font-face {
+/* @font-face {
     font-family: 'norican';
     font-weight: normal;
     src: url(../assets/fonts/norican.regular.otf);
-}
+} */
 
 /* variables */
 :root {

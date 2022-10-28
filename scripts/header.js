@@ -14,4 +14,17 @@ window.addEventListener('scroll', () => {
 })
 
 
+// Mobile nav bar slide in on click
+const mobileNavBar = document.querySelector('.mobile-nav-bar');
+const hamburger = document.querySelector('.nav-bar .hamburger');
+const mobileNavCloseBtn = document.querySelector('.mobile-nav-bar .close-button i');
+const mobileOverlay = document.querySelector('.mobile-overlay');
 
+hamburger.addEventListener('click', () => {
+    mobileNavBar.style.transform = 'translateX(0)';
+    mobileOverlay.style.display = 'block';
+})
+ mobileNavCloseBtn.addEventListener('click', () => {
+    mobileNavBar.style.transform = 'translateX(-100%)';
+    mobileOverlay.style.display = 'none';
+ })

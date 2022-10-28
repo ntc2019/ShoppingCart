@@ -1,0 +1,42 @@
+@media screen and (max-width : 1200px) {
+
+
+    .nav-bar .order-info {
+        display: none;
+    }
+
+    .nav-bar .telephone {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width : 992px) {
+
+    .nav-bar .nav-links,
+    .nav-bar .nav-functions {
+        display: none;
+    }
+
+    .nav-bar .hamburger {
+        display: block;
+    }
+
+    main {
+        margin-top: -20px;
+    }
+
+    .mobile-nav-bar {
+        display: block;
+    }
+
+}
+
+
+@media screen and (max-width : 768px) {
+
+
+    .contact-info {
+        display: none;
+    }
+}
