@@ -228,12 +228,15 @@
 }
 
 .offers-one-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .offers-one-wrapper li {
+    width: calc(100% / 3 - 20px);
+    margin: 0 10px;
     padding: 30px 40px;
     display: flex;
     align-items: center;
@@ -342,18 +345,19 @@
 
 .products h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .products .dishes-tabs {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin-bottom: 80px;
 }
 
 .products .dishes-tabs .tab {
-    margin: 0px 5px;
+    margin: 10px 5px;
     border: 1px solid var(--border);
     padding: 10px 40px;
     border-radius: 30px;
@@ -618,9 +622,11 @@
     letter-spacing: 10px;
     filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
     margin-bottom: 70px;
+    display: inline-block;
 }
 
 .ad .ad-body a {
+    display: inline-block;
     background-color: white;
     font-size: 1.5rem;
     padding: 18px 40px;
@@ -635,19 +641,20 @@
 
 .ad .ad-body .pizza .lightning-icon {
     position: absolute;
-    top: 0;
+    /* top: 0; */
     height: fit-content;
 }
 
 .ad .ad-body .pizza .lightning-icon.one {
     width: 50px;
-    right: 50%;
-    transform: translateY(-85%);
+    right: 20%;
+    top: -74%;
+
 }
 
 .ad .ad-body .pizza .lightning-icon.two {
     width: 90px;
-    right: 36%;
+    right: 2%;
     transform: translateY(-75%);
 }
 

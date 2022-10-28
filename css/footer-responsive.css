@@ -1,0 +1,18 @@
+@media screen and (max-width: 992px) {
+    .footer-columns {
+        padding-top: 50px;
+    }
+
+    .footer-column {
+        margin-top: 30px;
+    }
+
+    .footer-column h2 {
+        margin-bottom: 10px;
+    }
+
+    .footer-column .subscribe {
+        max-width: 300px;
+        margin: 20px auto 0;
+    }
+}
