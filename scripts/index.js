@@ -1,6 +1,5 @@
 // Page open anim
 const pageLoadScrollY = window.scrollY;
-console.log(pageLoadScrollY);
 // Banner section
 let bannerPizzaAnim = anime({
     targets: '.banner-imgs .banner-pizza',

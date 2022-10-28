@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/misc.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/header-responsive.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/footer-responsive.css">
     <link rel="stylesheet" href="./css/products-list.css">
     <title>Poco Shop</title>
 </head>
@@ -43,33 +45,47 @@
         </div>
     </header>
     <nav class="nav-bar">
-        <div class="container">
-            <div class="nav-bar-wrapper">
-                <div class="logo"><img src="./assets/images/logo_svg.svg" alt=""></div>
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="" target="_blank">Menu</a></li>
-                    <li><a href="" target="_blank">About</a></li>
-                    <li><a href="../shop.html" target="_blank">Shop</a></li>
-                    <li><a href="#" target="_blank">Contact</a></li>
-                </ul>
-                <div class="order-info">
-                    <i class="fa-solid fa-motorcycle"></i>
-                    <div class="order-info-content">
-                        <p class="order-info-text">Call and Order in</p>
-                        <p class="order-info-phone">+1 718-904-4450</p>
+        <div class="nav-bar-sticky-fixed">
+            <div class="container">
+                <div class="nav-bar-wrapper">
+                    <div class="hamburger"><i class="fa-solid fa-burger"></i></div>
+                    <div class="logo"><img src="./assets/images/logo_svg.svg" alt=""></div>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="" target="_blank">Menu</a></li>
+                        <li><a href="" target="_blank">About</a></li>
+                        <li><a href="./products-list.html" target="_blank">Shop</a></li>
+                        <li><a href="#" target="_blank">Contact</a></li>
+                    </ul>
+                    <div class="order-info">
+                        <i class="fa-solid fa-motorcycle"></i>
+                        <div class="order-info-content">
+                            <p class="order-info-text">Call and Order in</p>
+                            <p class="order-info-phone">+1 718-904-4450</p>
+                        </div>
                     </div>
+                    <ul class="nav-functions">
+                        <li><a><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        <li><a><i class="fa-solid fa-user"></i></a></li>
+                        <li><a><i class="fa-solid fa-heart"></i></a></li>
+                        <li><a><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    </ul>
+                    <div class="telephone"><i class="fa-solid fa-phone-flip"></i></div>
                 </div>
-                <ul class="nav-functions">
-                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                    <li><i class="fa-solid fa-user"></i></li>
-                    <li><i class="fa-solid fa-heart"></i></li>
-                    <li><i class="fa-solid fa-cart-shopping"></i></li>
-                </ul>
             </div>
         </div>
     </nav>
-
+    <div class="mobile-nav-bar">
+        <div class="close-button"><i class="fa-solid fa-xmark"></i></div>
+        <ul class="mobile-nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="" target="_blank">Menu</a></li>
+            <li><a href="" target="_blank">About</a></li>
+            <li><a href="./products-list.html" target="_blank">Shop</a></li>
+            <li><a href="#" target="_blank">Contact</a></li>
+        </ul>
+    </div>
+    <div class="mobile-overlay"></div>
     <!-- main -->
 
     <main>
@@ -85,10 +101,311 @@
             <div class="container">
                 <div class="shop-body-wrapper">
                     <div class="products-list">
-                        Product List
+                        <div class="info-top">
+                            <div class="info-left">Showing 1–12 of 54 results</div>
+                            <div class="info-right">
+                                <div class="layout-tabs">
+                                    <div class="grid icon active"><i class="fa-solid fa-grip-vertical"></i></div>
+                                    <div class="list icon"><i class="fa-solid fa-list"></i></div>
+                                </div>
+                                <form action="">
+                                    <select name="sortBy" id="sortBy">
+                                        <option value="">Default Sorting</option>
+                                        <option value="1">Sort by popularity</option>
+                                        <option value="2">Sort by average rating</option>
+                                        <option value="3">Sort by latest</option>
+                                        <option value="4">Sort by price: low to high</option>
+                                        <option value="5">Sort by price: high to low</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="products-list-body">
+                            <div class="dishes-cards">
+                                <div class="container">
+                                    <ul class="row">
+                                        <li class="dish-card col-xl-4 col-lg-6">
+                                            <div class="card-wrapper sale">
+                                                <div class="card-img">
+                                                    <span class="sale-tag">Sale!</span>
+                                                    <a class="wish-icon"><i class="fa-solid fa-heart"></i></a>
+                                                    <img src="./assets/images/3-1-450x450.png" alt="">
+                                                    <a class="dish-link" href=""></a>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>BBQ chicken breast</h3>
+                                                    <p class="description">A mighty meaty double helping of all the
+                                                        reasons you love our
+                                                        burger.</p>
+                                                    <div class="card-body-bottom">
+                                                        <div class="prices">
+                                                            <span class="price discounted">£12.61</span>
+                                                            <span class="price">£8.00</span>
+                                                        </div>
+                                                        <span class="card-shopping-cart"><i
+                                                                class="fa-solid fa-cart-shopping"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dish-card col-xl-4 col-lg-6">
+                                            <div class="card-wrapper">
+                                                <div class="card-img">
+                                                    <span class="sale-tag">Sale!</span>
+                                                    <a class="wish-icon"><i class="fa-solid fa-heart"></i></a>
+                                                    <img src="./assets/images/3-1-450x450.png" alt="">
+                                                    <a class="dish-link" href=""></a>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>BBQ chicken breast</h3>
+                                                    <p class="description">A mighty meaty double helping of all the
+                                                        reasons you love our
+                                                        burger.</p>
+                                                    <div class="card-body-bottom">
+                                                        <div class="prices">
+                                                            <span class="price discounted">£12.61</span>
+                                                            <span class="price">£8.00</span>
+                                                        </div>
+                                                        <span class="card-shopping-cart"><i
+                                                                class="fa-solid fa-cart-shopping"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dish-card col-xl-4 col-lg-6">
+                                            <div class="card-wrapper">
+                                                <div class="card-img">
+                                                    <span class="sale-tag">Sale!</span>
+                                                    <a class="wish-icon"><i class="fa-solid fa-heart"></i></a>
+                                                    <img src="./assets/images/3-1-450x450.png" alt="">
+                                                    <a class="dish-link" href=""></a>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>BBQ chicken breast</h3>
+                                                    <p class="description">A mighty meaty double helping of all the
+                                                        reasons you love our
+                                                        burger.</p>
+                                                    <div class="card-body-bottom">
+                                                        <div class="prices">
+                                                            <span class="price discounted">£12.61</span>
+                                                            <span class="price">£8.00</span>
+                                                        </div>
+                                                        <span class="card-shopping-cart"><i
+                                                                class="fa-solid fa-cart-shopping"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dish-card col-xl-4 col-lg-6">
+                                            <div class="card-wrapper">
+                                                <div class="card-img">
+                                                    <span class="sale-tag">Sale!</span>
+                                                    <a class="wish-icon"><i class="fa-solid fa-heart"></i></a>
+                                                    <img src="./assets/images/3-1-450x450.png" alt="">
+                                                    <a class="dish-link" href=""></a>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>BBQ chicken breast</h3>
+                                                    <p class="description">A mighty meaty double helping of all the
+                                                        reasons you love our
+                                                        burger.</p>
+                                                    <div class="card-body-bottom">
+                                                        <div class="prices">
+                                                            <span class="price discounted">£12.61</span>
+                                                            <span class="price">£8.00</span>
+                                                        </div>
+                                                        <span class="card-shopping-cart">
+                                                            <i class="fa-solid fa-cart-shopping"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dish-card col-xl-4 col-lg-6">
+                                            <div class="card-wrapper">
+                                                <div class="card-img">
+                                                    <span class="sale-tag">Sale!</span>
+                                                    <a class="wish-icon"><i class="fa-solid fa-heart"></i></a>
+                                                    <img src="./assets/images/3-1-450x450.png" alt="">
+                                                    <a class="dish-link" href=""></a>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>BBQ chicken breast</h3>
+                                                    <p class="description">A mighty meaty double helping of all the
+                                                        reasons you love our
+                                                        burger.</p>
+                                                    <div class="card-body-bottom">
+                                                        <div class="prices">
+                                                            <span class="price discounted">£12.61</span>
+                                                            <span class="price">£8.00</span>
+                                                        </div>
+                                                        <span class="card-shopping-cart"><i
+                                                                class="fa-solid fa-cart-shopping"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dish-card col-xl-4 col-lg-6">
+                                            <div class="card-wrapper">
+                                                <div class="card-img">
+                                                    <span class="sale-tag">Sale!</span>
+                                                    <a class="wish-icon"><i class="fa-solid fa-heart"></i></a>
+                                                    <img src="./assets/images/3-1-450x450.png" alt="">
+                                                    <a class="dish-link" href=""></a>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>BBQ chicken breast</h3>
+                                                    <p class="description">A mighty meaty double helping of all the
+                                                        reasons you love our
+                                                        burger.</p>
+                                                    <div class="card-body-bottom">
+                                                        <div class="prices">
+                                                            <span class="price discounted">£12.61</span>
+                                                            <span class="price">£8.00</span>
+                                                        </div>
+                                                        <span class="card-shopping-cart"><i
+                                                                class="fa-solid fa-cart-shopping"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dish-card col-xl-4 col-lg-6">
+                                            <div class="card-wrapper">
+                                                <div class="card-img">
+                                                    <span class="sale-tag">Sale!</span>
+                                                    <a class="wish-icon"><i class="fa-solid fa-heart"></i></a>
+                                                    <img src="./assets/images/3-1-450x450.png" alt="">
+                                                    <a class="dish-link" href=""></a>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>BBQ chicken breast</h3>
+                                                    <p class="description">A mighty meaty double helping of all the
+                                                        reasons you love our
+                                                        burger.</p>
+                                                    <div class="card-body-bottom">
+                                                        <div class="prices">
+                                                            <span class="price discounted">£12.61</span>
+                                                            <span class="price">£8.00</span>
+                                                        </div>
+                                                        <span class="card-shopping-cart"><i
+                                                                class="fa-solid fa-cart-shopping"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dish-card col-xl-4 col-lg-6">
+                                            <div class="card-wrapper">
+                                                <div class="card-img">
+                                                    <span class="sale-tag">Sale!</span>
+                                                    <a class="wish-icon"><i class="fa-solid fa-heart"></i></a>
+                                                    <img src="./assets/images/3-1-450x450.png" alt="">
+                                                    <a class="dish-link" href=""></a>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>BBQ chicken breast</h3>
+                                                    <p class="description">A mighty meaty double helping of all the
+                                                        reasons you love our
+                                                        burger.</p>
+                                                    <div class="card-body-bottom">
+                                                        <div class="prices">
+                                                            <span class="price discounted">£12.61</span>
+                                                            <span class="price">£8.00</span>
+                                                        </div>
+                                                        <span class="card-shopping-cart"><i
+                                                                class="fa-solid fa-cart-shopping"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products-page-nav">
+                            <a class="page link active">1</a>
+                            <a class="page link">2</a>
+                            <a class="page link">3</a>
+                            <a class="page link">4</a>
+                            <a class="page link">5</a>
+                            <a class="next-page link">NEXT<i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
                     </div>
                     <div class="filter">
-                        Categories
+                        <div class="categories sect">
+                            <h2>Categories</h2>
+                            <ul class="categories-list">
+                                <li><i class="fa-solid fa-burger"></i>Burgers<span class="dish-num">(9)</span></li>
+                                <li><i class="fa-solid fa-martini-glass-citrus"></i>Cold Drinks<span
+                                        class="dish-num">(20)</span></li>
+                                <li><i class="fa-solid fa-mug-hot"></i>Hot Drinks<span class="dish-num">(5)</span></li>
+                                <li><i class="fa-solid fa-hotdog"></i>Hot dogs<span class="dish-num">(6)</span></li>
+                                <li><i class="fa-solid fa-pizza-slice"></i>Pizza<span class="dish-num">(14)</span></li>
+                                <li><i class="fa-solid fa-cookie-bite"></i>Sweet Snack<span class="dish-num">(2)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="search-products sect">
+                            <input type="text" placeholder="Search products..." id="search-products-input">
+                            <span class="search icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        </div>
+                        <div class="filter-price sect">
+                            <h2>Filter by price</h2>
+                            <div class="price-range">
+                                <div class="slider-body neutral">
+                                    <div class="slider-body active">
+                                        <div class="slider-head left"></div>
+                                        <div class="slider-head right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="filter-price-text">Price: £0 — £20</p>
+                        </div>
+                        <div class="filter-size sect">
+                            <h2>Filter by size</h2>
+                            <ul class="size-list">
+                                <li>L</li>
+                                <li>M</li>
+                                <li>S</li>
+                                <li>X</li>
+                            </ul>
+                        </div>
+                        <div class="best-deals sect">
+                            <h2>Best Deals</h2>
+                            <ul class="deal-list">
+                                <li class="deal">
+                                    <a class="deal-img"><img src="./assets/images/54.1-450x450.png" alt=""></a>
+                                    <div class="deal-detail">
+                                        <div class="stars"><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                        <a class="deal-name">Water Bottle</a>
+                                        <div class="deal-price">£10.18</div>
+                                    </div>
+                                </li>
+
+                                <li class="deal">
+                                    <a class="deal-img"><img src="./assets/images/53-1-450x450.png" alt=""></a>
+                                    <div class="deal-detail">
+                                        <div class="stars"><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                        <a class="deal-name">Veggie Lover</a>
+                                        <div class="deal-price">£14.90</div>
+                                    </div>
+                                </li>
+
+                                <li class="deal">
+                                    <a class="deal-img"><img src="./assets/images/52-1-450x450.png" alt=""></a>
+                                    <div class="deal-detail">
+                                        <div class="stars"><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                        <a class="deal-name">Tropicana Juice</a>
+                                        <div class="deal-price">£11.11</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,6 +465,7 @@
             </div>
         </div>
     </footer>
+    <script src="./scripts/header.js"></script>
 </body>
 
 </html>
