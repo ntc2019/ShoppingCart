@@ -513,7 +513,7 @@
 
 /* START Ads */
 
-.ad {
+.pizza-offer {
     height: 550px;
     position: relative;
     overflow: hidden;
@@ -522,7 +522,7 @@
     align-items: center;
 }
 
-.ad .overlay-bg {
+.pizza-offer .overlay-bg {
     height: 100%;
     position: absolute;
     top: 0;
@@ -530,14 +530,14 @@
     z-index: -1;
 }
 
-.ad .overlay-bg img {
+.pizza-offer .overlay-bg img {
     height: 100%;
     width: 100%;
     display: block;
     object-fit: cover;
 }
 
-.ad .overlay-pizza {
+.pizza-offer .overlay-pizza {
     position: absolute;
     bottom: 0;
     left: 5%;
@@ -546,7 +546,7 @@
     transform: translateY(15%);
 }
 
-.ad .discount-img {
+.pizza-offer .discount-img {
     position: absolute;
     top: 20%;
     left: 30%;
@@ -558,7 +558,7 @@
     height: 216px;
 }
 
-.ad .discount-img img {
+.pizza-offer .discount-img img {
     position: absolute;
     top: 0;
     left: 0;
@@ -566,21 +566,21 @@
     z-index: -1;
 }
 
-.ad .discount-img .discount-body {
+.pizza-offer .discount-img .discount-body {
     position: absolute;
     top: 12%;
     left: 18%;
     text-align: center;
 }
 
-.ad .discount-img .discount-body .get-up {
+.pizza-offer .discount-img .discount-body .get-up {
     font-family: var(--font-deco);
     color: black;
     font-weight: bold;
     padding-right: 8px;
 }
 
-.ad .discount-img .discount-body .percent {
+.pizza-offer .discount-img .discount-body .percent {
     font-weight: bold;
     font-size: 6rem;
     line-height: 1;
@@ -588,7 +588,7 @@
 
 }
 
-.ad .discount-img .discount-body .off {
+.pizza-offer .discount-img .discount-body .off {
     font-weight: bold;
     font-size: 3rem;
     line-height: 1;
@@ -598,14 +598,14 @@
 
 /* ads body */
 
-.ad .ad-body {
+.pizza-offer .pizza-offer-body {
     width: 40%;
     position: relative;
     z-index: 2;
     padding-bottom: 50px;
 }
 
-.ad .ad-body .hot {
+.pizza-offer .pizza-offer-body .hot {
     font-family: var(--font-deco);
     color: white;
     font-size: 4rem;
@@ -613,7 +613,7 @@
     filter: drop-shadow(4px 1px 3px rgba(0, 0, 0, 1));
 }
 
-.ad .ad-body .pizza {
+.pizza-offer .pizza-offer-body .pizza {
     position: relative;
     color: #ffcd02;
     font-size: 15rem;
@@ -625,7 +625,7 @@
     display: inline-block;
 }
 
-.ad .ad-body a {
+.pizza-offer .pizza-offer-body a {
     display: inline-block;
     background-color: white;
     font-size: 1.5rem;
@@ -635,24 +635,24 @@
     transition: all 200ms;
 }
 
-.ad .ad-body a:hover {
+.pizza-offer .pizza-offer-body a:hover {
     background-color: var(--color-primary);
 }
 
-.ad .ad-body .pizza .lightning-icon {
+.pizza-offer .pizza-offer-body .pizza .lightning-icon {
     position: absolute;
     /* top: 0; */
     height: fit-content;
 }
 
-.ad .ad-body .pizza .lightning-icon.one {
+.pizza-offer .pizza-offer-body .pizza .lightning-icon.one {
     width: 50px;
     right: 20%;
     top: -74%;
 
 }
 
-.ad .ad-body .pizza .lightning-icon.two {
+.pizza-offer .pizza-offer-body .pizza .lightning-icon.two {
     width: 90px;
     right: 2%;
     transform: translateY(-75%);
